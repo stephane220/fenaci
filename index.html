@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenaci 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .Fenaci-gradient {
+            background: linear-gradient(135deg, #e64a19 0%, #ff6f00 50%, #d84315 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <!-- Section En-tête / Logo principal -->
+    <header class="w-full bg-white py-4 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center px-4">
+            <div class="flex flex-col items-center text-center">
+                <div class="text-5xl font-black tracking-wider text-green-600 flex items-center justify-center">
+                    <span class="text-orange-500 text-6xl font-serif">F</span>ENANCI'
+                </div>
+                <div class="text-xs font-bold text-gray-700 tracking-widest uppercase mt-1">
+                    7<span class="lowercase">e</span> Édition <span class="text-orange-500 font-extrabold text-sm">2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barre de Navigation Responsive -->
+    <nav class="w-full bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+            
+            <!-- Bouton Menu Mobile (Hamburger) - VISIBLE UNIQUEMENT SUR PETIT ÉCRAN (lg:hidden) -->
+            <button id="menu-btn" class="lg:hidden text-orange-500 hover:text-orange-600 focus:outline-none p-2 rounded-md transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Menu Horizontal - VISIBLE PAR DÉFAUT SUR GRAND ÉCRAN (hidden lg:flex) -->
+            <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide text-gray-700">
+                <a href="https://Fenaci.ci/" class="hover:text-orange-500 transition-colors uppercase text-orange-500">Accueil</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Vivre le Fenaci</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Le Fenaci +</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Exposants +</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Sponsors +</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">B2B +</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Espace Média +</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Infos Pratiques +</a>
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Nous Contacter</a>
+            </div>
+
+            <!-- Sélecteur de Langue Dropdown -->
+            <div class="relative">
+                <button id="lang-btn" class="flex items-center space-x-2 border border-gray-300 rounded px-3 py-1.5 hover:bg-gray-50 text-sm font-medium transition-colors">
+                    <span class="text-lg">🇫🇷</span>
+                    <i class="fa-solid fa-chevron-down text-xs text-gray-500"></i>
+                </button>
+                <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-32 bg-white border border-gray-200 rounded shadow-lg py-1 z-50">
+                    <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-orange-50">
+                        <span>🇫🇷</span> <span>Français</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 hover:bg-orange-50">
+                        <span>🇬🇧</span> <span>English</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Déroulant - S'affiche uniquement au clic sur mobile (lg:hidden) -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-2">
+            <a href="https://Fenaci.ci/" class="block py-2 text-orange-500 font-medium uppercase text-sm">Accueil</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Vivre le Fenaci</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Le Fenaci +</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Exposants +</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Sponsors +</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">B2B +</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Espace Média +</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Infos Pratiques +</a>
+            <a href="#" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Nous Contacter</a>
+        </div>
+    </nav>
+
+    <!-- Section Principale (Grille) -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+            
+            <!-- Colonne Gauche : Informations Utiles -->
+            <div class="lg:col-span-1 bg-orange-600 text-white rounded-sm shadow-md overflow-hidden">
+                <div class="bg-orange-700 py-4 px-4 text-center font-bold tracking-wide uppercase text-sm border-b border-orange-500">
+                    Informations Utiles
+                </div>
+                <div class="p-3 space-y-2">
+                    <a href="#" class="block text-center border border-white/40 hover:bg-white/10 py-3 px-4 font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                        Programme Fenaci 2026
+                    </a>
+                    <a href="#" class="block text-center border border-white/40 hover:bg-white/10 py-3 px-4 font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                        Plaquette Fenaci 2026
+                    </a>
+                    <a href="#" class="block text-center border border-white/40 hover:bg-white/10 py-3 px-4 font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                        Catalogue Fenaci 2026
+                    </a>
+                    <a href="#" class="block text-center border border-white/40 hover:bg-white/10 py-3 px-4 font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                        Sponsoring & Partenariat
+                    </a>
+                    <a href="#" class="block text-center border border-white/40 hover:bg-white/10 py-3 px-4 font-semibold text-xs uppercase tracking-wider rounded transition-all">
+                        Hackaton 2026
+                    </a>
+                </div>
+            </div>
+
+            <!-- Colonne Droite : Bannière principale -->
+            <div class="lg:col-span-3 Fenaci-gradient text-white rounded-sm shadow-md p-6 md:p-12 relative flex flex-col justify-between min-h-[380px] overflow-hidden">
+                <div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 h-full w-full">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4 max-w-md">
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 flex flex-col items-center">
+                            <span class="text-4xl font-black tracking-tight text-white">FENANCI</span>
+                            <span class="text-2xl font-bold text-orange-300">2026</span>
+                            <span class="text-[9px] uppercase tracking-widest text-gray-200 mt-1 text-center font-medium">Salon International de l'Agriculture<br>et des Ressources Animales</span>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 flex flex-col items-center md:items-start space-y-6">
+                        <div>
+                            <span class="bg-blue-600 text-white text-xs font-bold uppercase px-3 py-1 rounded tracking-wider">
+                                Thème
+                            </span>
+                            <h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight mt-3 uppercase leading-tight">
+                                Quels systèmes de transformation agro-alimentaire pour la souveraineté alimentaire en Afrique ?
+                            </h1>
+                        </div>
+
+                        <div class="w-full flex flex-wrap items-center gap-4 pt-4 border-t border-white/20 justify-center md:justify-start">
+                            <div class="border border-white/40 rounded px-4 py-2 text-sm font-bold tracking-wide bg-black/10">
+                                26 Septembre &gt; 26 Octobre | 2026
+                            </div>
+                            <div class="flex items-center space-x-2 border border-white/40 rounded px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-black/10">
+                                <i class="fa-solid fa-location-dot text-orange-300"></i>
+                                <span>Parc des Expositions d'Abidjan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+        <!-- ==================== SECTION : NOS SPONSORS (STATIQUE) ==================== -->
+<section class="mt-12 bg-white rounded-sm shadow-sm border border-gray-100 py-8">
+    <h2 class="text-center text-2xl font-extrabold uppercase tracking-wide text-orange-600 mb-6 font-serif">
+        Nos Sponsors
+    </h2>
+    <div class="max-w-7xl mx-auto px-4 flex justify-center">
+        <!-- Remplacez 'chemin_vers_votre_banniere_sponsors.jpg' par le lien réel de votre image -->
+        <img src="image/sponsor.png" alt="Bannière Sponsors Fenaci 2026" class="w-full h-auto max-w-5xl object-contain">
+    </div>
+</section>
+
+<!-- ==================== SECTION : EXPOSANTS 2026 (DÉFILEMENT) ==================== -->
+<section class="mt-12 bg-white rounded-sm shadow-sm border border-gray-100 py-8 overflow-hidden">
+    <!-- Style CSS pour l'animation de défilement infini des exposants -->
+    <style>
+        @keyframes scrollExposants {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-exposants {
+            display: flex;
+            width: max-content;
+            animation: scrollExposants 25s linear infinite;
+        }
+        .animate-exposants:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+    <h2 class="text-center text-2xl font-extrabold uppercase tracking-wide text-orange-600 mb-8 font-serif">
+        Exposants 2026
+    </h2>
+    
+    <!-- Conteneur du Marquee -->
+    <div class="w-full overflow-hidden relative">
+        <!-- Effets de flou sur les côtés -->
+        <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+        <!-- Bandeau mobile -->
+        <div class="animate-exposants space-x-16 items-center flex">
+            
+            <!-- GROUPE 1 : Les logos des exposants (A remplacer par vos balises <img> réelles) -->
+            <div class="flex items-center space-x-16 shrink-0">
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">GrainPro</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">CHP</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Agrifer</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Agrici</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Greeno</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Agromap</div>
+            </div>
+            
+            <!-- GROUPE 2 : Duplication exacte pour assurer la continuité visuelle -->
+            <div class="flex items-center space-x-16 shrink-0">
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">GrainPro</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">CHP</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Agrifer</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Agrici</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Greeno</div>
+                <div class="h-16 w-32 bg-gray-50 flex items-center justify-center font-bold text-gray-400 text-xs uppercase">Agromap</div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================== SECTION : REJOIGNEZ NOTRE COMMUNAUTÉ ==================== -->
+<section class="mt-12 bg-white rounded-sm shadow-sm border border-gray-100 p-6 md:p-8">
+    
+    <!-- Titre Principal de la Section -->
+    <h2 class="text-center text-xl md:text-2xl font-black uppercase tracking-wide text-orange-600 mb-10 font-serif">
+        Rejoignez notre communauté #Fenaci2026 !
+    </h2>
+
+    <!-- Grille à 2 colonnes (s'empile sur mobile, côte à côte sur grand écran) -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        
+        <!-- ================= COLONNE GAUCHE : FACEBOOK (SCROLLABLE) ================= -->
+        <div class="flex flex-col h-[550px]"> <!-- Hauteur fixe pour forcer le scroll -->
+            <h3 class="text-sm font-extrabold uppercase tracking-wider text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                <i class="fa-brands fa-facebook text-blue-600 text-lg"></i> Suivez-nous sur Facebook
+            </h3>
+            
+            <!-- Zone défilante (Scrollable) -->
+            <div class="flex-1 overflow-y-auto pr-2 space-y-4 custom-scrollbar">
+                
+                <!-- Publication 1 -->
+                <div class="bg-gray-50 border border-gray-200 rounded p-4 space-y-3 shadow-sm">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">S</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-800">Fenaci - Salon International</h4>
+                            <span class="text-[10px] text-gray-400">Il y a 1 an</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Merci à l’ensemble des exposants qui ont contribué à faire du Fenaci 2026 un espace vivant de découvertes, d’échanges et d’innovation. Votre engagement a pleinement incarné la dynamique agricole.
+                    </p>
+                    <div class="text-[11px] font-semibold text-orange-600 space-x-1">
+                        <span>#Fenaci2026</span> <span>#Agriculture</span> <span>#Innovation</span> <span>#Exposants</span>
+                    </div>
+                    <div class="h-48 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-xs uppercase font-medium">
+                        [ Image de la publication ]
+                    </div>
+                </div>
+
+                <!-- Publication 2 -->
+                <div class="bg-gray-50 border border-gray-200 rounded p-4 space-y-3 shadow-sm">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-sm">S</div>
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-800">Fenaci - Salon International</h4>
+                            <span class="text-[10px] text-gray-400">Il y a 1 an</span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-600 leading-relaxed">
+                        Le Fenaci 2026 s’est achevé avec succès. Nous adressons nos sincères remerciements à l’ensemble de nos sponsors pour leur engagement et leur précieux soutien.
+                    </p>
+                    <div class="text-[11px] font-semibold text-orange-600 space-x-1">
+                        <span>#Fenaci2026</span> <span>#Elevage</span> <span>#Sponsors</span> <span>#Partenaires</span>
+                    </div>
+                    <div class="h-48 bg-gray-200 rounded flex items-center justify-center text-gray-400 text-xs uppercase font-medium">
+                        [ Image de la publication ]
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ================= COLONNE DROITE : YOUTUBE ================= -->
+        <div class="flex flex-col h-[550px]">
+            <h3 class="text-sm font-extrabold uppercase tracking-wider text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                <i class="fa-brands fa-youtube text-red-600 text-lg"></i> Suivez-nous sur YouTube
+            </h3>
+            
+            <div class="flex-1 flex flex-col space-y-4 overflow-y-auto pr-1">
+                <!-- Vidéo Principale (Lecteur fictif / Embed) -->
+                <div class="relative bg-black rounded overflow-hidden aspect-video w-full group shadow-md shrink-0">
+                    <!-- Image de couverture fictive -->
+                    <div class="absolute inset-0 bg-gray-800 flex items-center justify-center text-white font-medium text-sm bg-cover bg-center" style="background-image: url('https://img.youtube.com/vi/placeholder/0.jpg');">
+                        <span class="bg-black/40 backdrop-blur-sm px-4 py-2 rounded">Retour sur le Fenaci 2026</span>
+                    </div>
+                    <!-- Bouton Play -->
+                    <button class="absolute inset-0 m-auto w-14 h-14 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-lg transition-transform group-hover:scale-110">
+                        <i class="fa-solid fa-play text-xl ml-1"></i>
+                    </button>
+                </div>
+
+                <!-- Grille des miniatures en dessous (3 colonnes) -->
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="aspect-video bg-gray-100 rounded border border-gray-200 relative flex items-center justify-center group cursor-pointer">
+                        <i class="fa-solid fa-play text-gray-400 text-xs group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                    <div class="aspect-video bg-gray-100 rounded border border-gray-200 relative flex items-center justify-center group cursor-pointer">
+                        <i class="fa-solid fa-play text-gray-400 text-xs group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                    <div class="aspect-video bg-gray-100 rounded border border-gray-200 relative flex items-center justify-center group cursor-pointer">
+                        <i class="fa-solid fa-play text-gray-400 text-xs group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                    <div class="aspect-video bg-gray-100 rounded border border-gray-200 relative flex items-center justify-center group cursor-pointer">
+                        <i class="fa-solid fa-play text-gray-400 text-xs group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                    <div class="aspect-video bg-gray-100 rounded border border-gray-200 relative flex items-center justify-center group cursor-pointer">
+                        <i class="fa-solid fa-play text-gray-400 text-xs group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                    <div class="aspect-video bg-gray-100 rounded border border-gray-200 relative flex items-center justify-center group cursor-pointer">
+                        <i class="fa-solid fa-play text-gray-400 text-xs group-hover:text-red-500 transition-colors"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Style additionnel optionnel pour épurer la barre de défilement (Scrollbar) -->
+<style>
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+</style>
+
+
+<!-- ==================== CONTENEUR PRINCIPAL DE L'ÉVÉNEMENT ==================== -->
+<section class="mt-12 bg-white rounded-sm shadow-sm border border-gray-100 p-6 md:p-12 space-y-16">
+    
+    <!-- PARTIE 1 : LE Fenaci UN ÉVÉNEMENT INCONTOURNABLE -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- COLONNE GAUCHE : Textes et Bouton -->
+        <div class="lg:col-span-4 space-y-6">
+            <h2 class="text-2xl md:text-3xl font-black text-orange-600 uppercase tracking-tight leading-none font-serif">
+                Le Fenaci<br>un événement<br>incontournable
+            </h2>
+            <p class="text-xs text-gray-600 leading-relaxed font-medium">
+                En seulement cents éditions, le Fenaci s'est imposé comme le salon de référence en matière d'agriculture, de ressources animales, halieutiques et forestières en Afrique subsaharienne. Trois ans après sa dernière édition, le Salon International de l'Agriculture et des Ressources Animales d'Abidjan a été relancé par le gouvernement ivoirien afin de valoriser, promouvoir et développer toutes les richesses du secteur agricole, de l'élevage et de la pêche de la Côte d'Ivoire.
+            </p>
+            <div class="pt-2">
+                <a href="#" class="inline-block bg-purple-700 hover:bg-purple-800 text-white text-xs font-bold px-6 py-3 rounded-sm tracking-wider uppercase shadow-sm transition-colors">
+                    Bilan 2026
+                </a>
+            </div>
+        </div>
+
+        <!-- COLONNE CENTRALE : Formes graphiques / Visuels -->
+       <!-- COLONNE CENTRALE : Formes graphiques / Visuels avec de vraies images -->
+<!-- COLONNE CENTRALE : Composition graphique déstructurée (Conforme à la maquette) -->
+<div class="lg:col-span-5 flex justify-center items-center relative h-[360px] w-full">
+    <div class="relative w-full h-full max-w-sm flex items-center justify-center">
+        
+        <!-- 1. IMAGE HAUTE (La Vache / Élevage) -->
+        <div class="absolute top-2 left-[40%] w-32 h-44 border-2 border-white shadow-md overflow-hidden rounded-tl-[100px] rounded-br-[100px] rounded-bl-[40px] rounded-tr-[40px] z-10">
+            <img 
+                src="image/mt.png" 
+                alt="Élevage SARA" 
+                class="w-full h-full object-cover"
+            >
+        </div>
+
+        <!-- 2. IMAGE DROITE (La Pousse / Végétal) -->
+        <div class="absolute top-16 right-4 w-28 h-40 border-2 border-white shadow-md overflow-hidden rounded-tr-[100px] rounded-bl-[100px] rounded-tl-[40px] rounded-br-[40px] z-10">
+            <img 
+                src="image/fl.jfif" 
+                alt="Culture SARA" 
+                class="w-full h-full object-cover"
+            >
+        </div>
+
+        <!-- 3. GRANDE IMAGE BASSE (Le Tracteur / Machinisme) -->
+        <div class="absolute bottom-2 left-6 w-64 h-40 border-2 border-white shadow-lg overflow-hidden rounded-tl-[30px] rounded-br-[40px] rounded-tr-[120px] rounded-bl-[120px] z-20">
+            <img 
+                src="image/trac.jfif" 
+                alt="Machinisme SARA" 
+                class="w-full h-full object-cover"
+            >
+        </div>
+
+        <!-- ================= HIERARCHIE DES PETITES FEUILLES COULÉES ================= -->
+        
+        <!-- Feuille isolée Orange (Tout en haut à droite) -->
+        <div class="absolute top-2 right-10 w-7 h-14 bg-orange-500 rounded-tl-full rounded-br-full rotate-[15deg] z-0"></div>
+
+        <!-- Groupe de 4 feuilles à gauche (Identique au logo) -->
+        <div class="absolute top-10 left-6 flex flex-col space-y-3 z-0">
+            <!-- Feuille Rouge -->
+            <div class="w-8 h-5 bg-red-600 rounded-tl-full rounded-br-full rotate-[-15deg] translate-x-4"></div>
+            <!-- Feuille Bleue -->
+            <div class="w-6 h-9 bg-sky-600 rounded-tl-full rounded-br-full rotate-[40deg] translate-x-8"></div>
+            <!-- Feuille Violette -->
+            <div class="w-8 h-5 bg-indigo-900 rounded-tl-full rounded-br-full rotate-[-45deg]"></div>
+            <!-- Feuille Jaune -->
+            <div class="w-10 h-6 bg-yellow-400 rounded-tl-full rounded-br-full rotate-[20deg] translate-x-6"></div>
+        </div>
+
+    </div>
+</div>
+
+        <!-- COLONNE DROITE : Chiffres clés -->
+        <div class="lg:col-span-3 space-y-2">
+            <style>
+                .striped-bg {
+                    background: repeating-linear-gradient(45deg, #fafdff, #fafdff 10px, #f4f9fc 10px, #f4f9fc 20px);
+                }
+            </style>
+            <div class="striped-bg border border-gray-100/50 p-4 text-center rounded-sm">
+                <div class="text-4xl font-light text-gray-800 tracking-tight">300000</div>
+                <div class="text-xs font-semibold text-gray-500 tracking-wide mt-1">Visites</div>
+            </div>
+            <div class="striped-bg border border-gray-100/50 p-4 text-center rounded-sm">
+                <div class="text-4xl font-light text-gray-800 tracking-tight">6500</div>
+                <div class="text-xs font-semibold text-gray-500 tracking-wide mt-1">Professionnels enregistrés</div>
+            </div>
+            <div class="striped-bg border border-gray-100/50 p-4 text-center rounded-sm">
+                <div class="text-4xl font-light text-gray-800 tracking-tight">20000</div>
+                <div class="text-xs font-semibold text-gray-500 tracking-wide mt-1">de surfaces d’exposition</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Séparateur horizontal discret interne -->
+    <hr class="border-gray-100">
+
+    <!-- PARTIE 2 : LES 3 BONNES RAISONS D'EXPOSER AU Fenaci (CONFORME À L'IMAGE) -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 items-start">
+        
+        <!-- Titre à gauche -->
+        <div class="lg:col-span-1">
+            <h3 class="text-xl font-black text-orange-600 uppercase tracking-tight leading-tight font-serif">
+                Les 3 bonnes raisons d'exposer au Fenaci
+            </h3>
+        </div>
+
+        <!-- Les 3 colonnes d'arguments -->
+        <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Raison 1 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+                <div class="w-16 h-16 bg-purple-700 text-white rounded-full flex items-center justify-center text-2xl shadow-sm">
+                    <i class="fa-solid fa-bullhorn"></i>
+                </div>
+                <h4 class="text-sm font-bold text-gray-800 leading-tight">
+                    Bénéficier d’une plus grande visibilité
+                </h4>
+                <ul class="text-[11px] text-gray-500 space-y-1 list-disc list-inside text-left">
+                    <li>Plus de 300 000 visiteurs attendus</li>
+                    <li>20 hectares de surface d’exposition</li>
+                    <li>Plus de 30 pays représentés</li>
+                </ul>
+            </div>
+
+            <!-- Raison 2 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+                <div class="w-16 h-16 bg-purple-700 text-white rounded-full flex items-center justify-center text-2xl shadow-sm">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h4 class="text-sm font-bold text-gray-800 leading-tight">
+                    Nouer des contacts, partager des expériences
+                </h4>
+                <ul class="text-[11px] text-gray-500 space-y-1 list-disc list-inside text-left">
+                    <li>6 585 professionnels enregistrés</li>
+                    <li>786 exposants dont plus de 473 stands</li>
+                </ul>
+            </div>
+
+            <!-- Raison 3 -->
+            <div class="flex flex-col items-center text-center space-y-4">
+                <div class="w-16 h-16 bg-purple-700 text-white rounded-full flex items-center justify-center text-2xl shadow-sm">
+                    <i class="fa-solid fa-sack-dollar"></i>
+                </div>
+                <h4 class="text-sm font-bold text-gray-800 leading-tight">
+                    Multiplier les occasions de vendre vos produits
+                </h4>
+                <p class="text-[11px] text-gray-500 leading-relaxed text-center">
+                    Le nombre considérable de visiteurs et d’investisseurs nationaux et internationaux attendus pendant ces 10 jours est une véritable garantie de chiffre d’affaires et de partenariats.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ==================== SECTION : LES 9 PÔLES DU SALON ==================== -->
+<section class="mt-12 bg-white rounded-sm shadow-sm border border-gray-100 py-12 px-6 md:px-12">
+    <div class="max-w-4xl mx-auto">
+        
+        <!-- Titre de la Section -->
+        <h2 class="text-center text-xl md:text-2xl font-black uppercase tracking-wide text-orange-600 mb-8 font-serif">
+            Les 9 pôles du salon
+        </h2>
+
+        <!-- Conteneur de l'image -->
+        <div class="flex justify-center items-center w-full">
+            <!-- 
+              Remplacer 'chemin_vers_votre_image_poles.png' par le lien de votre image.
+              La classe 'max-w-2xl' limite la taille sur grand écran pour éviter que ce soit trop géant,
+              tandis que 'w-full h-auto' gère l'adaptation parfaite sur mobile.
+            -->
+            <img 
+                src="image/baniere.png" 
+                alt="Graphique des 9 pôles du Fenaci 2026" 
+                class="w-full h-auto max-w-2xl object-contain drop-shadow-sm"
+            >
+        </div>
+
+    </div>
+</section>
+
+<!-- ==================== SECTION : NEWSLETTER ==================== -->
+<section class="mt-12 max-w-7xl mx-auto px-4">
+    <div class="bg-white border border-gray-300 p-8 md:p-12 max-w-4xl mx-auto rounded-sm">
+        
+        <!-- Titre de la Newsletter -->
+        <h2 class="text-center text-2xl md:text-3xl font-black text-orange-600 uppercase tracking-wide mb-3 font-serif">
+            Newsletter
+        </h2>
+        
+        <!-- Sous-titre / Description -->
+        <p class="text-center text-xs md:text-sm text-gray-600 mb-8 font-medium">
+            Abonnez-vous pour recevoir de l'information au sujet du Fenaci.
+        </p>
+
+        <!-- Formulaire de Contact -->
+        <form action="#" method="POST" class="space-y-6">
+            <!-- Grille des Champs d'entrée -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- Champ Nom & Prénoms -->
+                <div>
+                    <input 
+                        type="text" 
+                        name="fullname" 
+                        placeholder="Votre nom & Prénoms" 
+                        required
+                        class="w-full bg-white border border-gray-400 text-gray-800 placeholder-gray-500 text-xs px-4 py-3 outline-none focus:border-orange-500 transition-colors rounded-none"
+                    >
+                </div>
+
+                <!-- Champ Email -->
+                <div>
+                    <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="Votre Email" 
+                        required
+                        class="w-full bg-white border border-gray-400 text-gray-800 placeholder-gray-500 text-xs px-4 py-3 outline-none focus:border-orange-500 transition-colors rounded-none"
+                    >
+                </div>
+
+                <!-- Champ Téléphone -->
+                <div>
+                    <input 
+                        type="tel" 
+                        name="phone" 
+                        placeholder="Votre Téléphone" 
+                        class="w-full bg-white border border-gray-400 text-gray-800 placeholder-gray-500 text-xs px-4 py-3 outline-none focus:border-orange-500 transition-colors rounded-none"
+                    >
+                </div>
+
+            </div>
+
+            <!-- Bouton d'Envoi -->
+            <div class="flex justify-center pt-2">
+                <button 
+                    type="submit" 
+                    class="bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs uppercase tracking-wider px-8 py-3 transition-colors shadow-sm rounded-none"
+                >
+                    Envoyer
+                </button>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+
+
+<!-- ==================== FOOTER PRINCIPAL ==================== -->
+<footer class="mt-12 w-full text-white font-sans text-xs">
+    
+    <!-- Partie Haute (Orange Fenaci) -->
+    <div class="bg-[#d24726] px-6 py-12 md:py-16 md:px-16">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+            
+            <!-- Colonne 1 : À Propos & Réseaux Sociaux -->
+            <div class="space-y-6">
+                <h3 class="text-sm font-black uppercase tracking-wider font-serif">
+                    A propos
+                </h3>
+                <!-- Emplacement Logo Fenaci -->
+                <div class="w-36 h-auto">
+                    <!-- Remplacer par le chemin réel de votre logo Fenaci 2026 -->
+                    <img src="chemin_vers_logo_Fenaci.png" alt="Fenaci 2026" class="w-full h-auto object-contain">
+                </div>
+                <div class="space-y-3">
+                    <span class="block text-xs font-black uppercase tracking-wider font-serif">Suivez-nous</span>
+                    <div class="flex items-center space-x-4 text-sm">
+                        <a href="#" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="hover:text-gray-200 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne 2 : Liens Utiles -->
+            <div class="space-y-6">
+                <h3 class="text-sm font-black uppercase tracking-wider font-serif">
+                    Liens utiles
+                </h3>
+                <ul class="space-y-4 font-medium text-[11px] leading-relaxed">
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 bg-white shrink-0 mt-1.5 mr-2.5"></span>
+                        <a href="#" class="hover:underline">Ministère de l'Agriculture et du Développement Rural</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 bg-white shrink-0 mt-1.5 mr-2.5"></span>
+                        <a href="#" class="hover:underline">Ministère des Ressources Animales et Halieutiques</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 bg-white shrink-0 mt-1.5 mr-2.5"></span>
+                        <a href="#" class="hover:underline">Ministère des Eaux et Forêts</a>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-1.5 h-1.5 bg-white shrink-0 mt-1.5 mr-2.5"></span>
+                        <a href="#" class="hover:underline">Ministère de l'Environnement et du Développement Durable</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3 : Siège et Bureau Commercial -->
+            <div class="space-y-6">
+                <h3 class="text-sm font-black uppercase tracking-wider font-serif">
+                    Siege et bureau commercial
+                </h3>
+                <div class="space-y-4 font-medium text-[11px] border-t border-white/20 pt-1">
+                    
+                    <!-- Adresse -->
+                    <div class="flex items-start space-x-3 py-2">
+                        <i class="fa-solid fa-location-dot mt-0.5 shrink-0 text-sm"></i>
+                        <p class="leading-tight">
+                            Riviera 2, face au collège André Malraux<br>SCI PAUL
+                        </p>
+                    </div>
+                    
+                    <!-- Téléphones fixes -->
+                    <div class="flex items-center space-x-3 border-t border-white/10 py-2">
+                        <i class="fa-solid fa-phone shrink-0 text-sm"></i>
+                        <p>+ 225 27 22 28 98 12 / +225 27 22 43 75 50</p>
+                    </div>
+                    
+                    <!-- Téléphone mobile -->
+                    <div class="flex items-center space-x-3 border-t border-white/10 py-2">
+                        <i class="fa-solid fa-phone shrink-0 text-sm"></i>
+                        <p>+225 07 49 49 40 40</p>
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="flex items-center space-x-3 border-t border-white/10 pt-2">
+                        <i class="fa-solid fa-envelope shrink-0 text-sm"></i>
+                        <a href="mailto:info@Fenaci.ci" class="hover:underline">info@Fenaci.ci</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Partie Basse (Marron / Copyright) -->
+    <div class="bg-[#6b2c18] py-4 px-6 text-center text-[10px] tracking-wide text-gray-200/90 font-medium">
+        © 2026 Fenaci. Tous droits réservés. Fenaci Group
+    </div>
+
+</footer>
+    <!-- JavaScript Interactif -->
+    <script>
+        // Menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Dropdown Langue
+        const langBtn = document.getElementById('lang-btn');
+        const langDropdown = document.getElementById('lang-dropdown');
+
+        langBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            langDropdown.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', () => {
+            langDropdown.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
