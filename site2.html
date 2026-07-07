@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BATIPRO CI — Construction & Décoration de Prestige en Côte d'Ivoire</title>
+    <!-- Polices modernes Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-main: #0B111E;        /* Bleu nuit profond */
+            --bg-card: #141D2F;        /* Fond de carte sombre */
+            --gold: #D4AF37;           /* Or véritable */
+            --gold-light: #F3E5AB;     /* Or clair pour survol */
+            --text-main: #F0F4F8;      /* Blanc/Gris très clair */
+            --text-muted: #94A3B8;     /* Gris bleuté */
+            --accent-red: #E11D48;     /* Rouge promo vibrant */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Syne', sans-serif;
+            color: #FFFFFF;
+        }
+
+        /* --- BANNIÈRE PROMO --- */
+        .top-banner {
+            background: linear-gradient(90deg, #991B1B, var(--accent-red), #991B1B);
+            color: #FFF;
+            text-align: center;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 1001;
+            box-shadow: 0 2px 15px rgba(225, 29, 72, 0.4);
+        }
+
+        .top-banner span {
+            background: #FFF;
+            color: var(--accent-red);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 800;
+            margin-right: 8px;
+        }
+
+        /* --- NAVIGATION --- */
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(11, 17, 30, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #FFF;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 10px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta:hover {
+            background: var(--gold);
+            color: var(--bg-main);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            padding: 120px 5% 100px;
+            min-height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(11,17,30,0.7) 0%, var(--bg-main) 100%), 
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover;
+        }
+
+        .hero-badge {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--gold);
+            color: var(--gold-light);
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            max-width: 950px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #FFF, var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-main {
+            background: linear-gradient(135deg, var(--gold), #B5902B);
+            color: #000;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-sec {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFF;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-sec:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: #FFF;
+        }
+
+        /* --- STATS BAR --- */
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1100px;
+            margin: -50px auto 80px;
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.2rem;
+            color: var(--gold);
+            font-weight: 800;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- SECTIONS COMMUNES --- */
+        .section {
+            padding: 90px 5%;
+            max-width: 1250px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .section-subtitle {
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+        }
+
+        /* --- GRILLE SERVICES --- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 40px 30px;
+            border-radius: 16px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+            transform-origin: left;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-icon {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            background: rgba(212, 175, 55, 0.1);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- OFFRE EXCLUSIVE (GIFTS) --- */
+        .promo-container {
+            background: linear-gradient(135deg, #18130B 0%, #2A1F10 100%);
+            border: 1px solid var(--gold);
+            border-radius: 20px;
+            padding: 60px 5%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .promo-box {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 30px 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .promo-box h4 {
+            color: var(--gold-light);
+            font-size: 1.3rem;
+            margin: 15px 0 10px;
+        }
+
+        /* --- PORTFOLIO --- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 320px;
+            group: ;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(11,17,30,0.95) 0%, rgba(11,17,30,0.2) 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 30px;
+        }
+
+        .tag {
+            background: var(--gold);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        /* --- FAQ (ACCORDÉONS) --- */
+        details {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        details[open] {
+            border-color: var(--gold);
+        }
+
+        summary {
+            padding: 22px 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::after {
+            content: '+';
+            color: var(--gold);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        details p {
+            padding: 0 25px 22px;
+            color: var(--text-muted);
+        }
+
+        /* --- CONTACT & FOOTER --- */
+        .contact-section {
+            background: var(--bg-card);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .contact-card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 50px;
+            border-radius: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 5%;
+            color: #64748B;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* --- BOUTON WHATSAPP FLOTTANT --- */
+        .float-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #FFF;
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            text-decoration: none;
+            z-index: 9999;
+            transition: transform 0.3s;
+            animation: pulse 2s infinite;
+        }
+
+        .float-wa:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .stats-bar { margin-top: 20px; }
+            .contact-card { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bannière Promo d'Urgence -->
+    <div class="top-banner">
+        <span>PROMO LIMITÉE</span> Célébrez nos nouveaux chantiers : -30% immédiats + 1 Salon offert sur vos travaux ! 🎁
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <a href="#" class="logo">BATI<span>PRO</span></a>
+        <a href="https://wa.me/2250555562949?text=Bonjour,%20je%20souhaite%20obtenir%20un%20devis%20gratuit." target="_blank" class="nav-cta">Demander un Devis</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-badge">⭐ Excellence & Prestige Architectural</div>
+        <h1>Construisez la Villa ou le Duplex de vos <span>Rêves en Côte d'Ivoire</span></h1>
+        <p>De la conception architecturale à une décoration intérieure et extérieure raffinée, nos experts donnent vie à vos projets immobiliers les plus ambitieux.</p>
+        <div class="hero-buttons">
+            <a href="https://wa.me/2250555562949?text=Bonjour,%20je%20souhaite%20profiter%20de%20l'offre%20exceptionnelle." target="_blank" class="btn-main">Profiter de l'Offre (-30%)</a>
+            <a href="#portfolio" class="btn-sec">Découvrir nos Réalisations</a>
+        </div>
+    </section>
+
+    <!-- Barre de Statistiques / Réassurance -->
+    <div class="stats-bar">
+        <div class="stat-item">
+            <div class="stat-number">A à Z</div>
+            <div class="stat-label">Prise en charge totale</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Sur Mesure & Standing</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">4 Cadeaux</div>
+            <div class="stat-label">Offres de lancement</div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="section-header">
+            <span class="section-subtitle">Savoir-Faire Général</span>
+            <h2 class="section-title">Une Expertise Complète pour Sublimer vos Espaces</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon">🏛️</div>
+                <h3>Construction Gros & Second Œuvre</h3>
+                <p>Élaboration technique et construction clé en main de Villas de luxe, Duplex contemporains et Immeubles de rapport avec une rigueur structurelle absolue.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🛋️</div>
+                <h3>Décoration & Design Intérieur</h3>
+                <p>Création d'atmosphères uniques, agencement optimal de l'espace, faux plafonds modernes, jeux de lumières et sélection de matériaux nobles.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌴</div>
+                <h3>Aménagement Extérieur</h3>
+                <p>Sublimation architecturale de vos façades, dallage élégant, aménagement de piscines, jardins paysagers et éclairage extérieur de sécurité.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offre Spéciale de Lancement -->
+    <section class="section">
+        <div class="promo-container">
+            <div class="section-header" style="margin-bottom: 20px;">
+                <span class="section-subtitle">Offre Exceptionnelle de Lancement</span>
+                <h2 class="section-title" style="color:#FFF;">Vos Cadeaux & Avantages Spéciaux</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Pour célébrer nos nouveaux chantiers, nous accompagnons votre investissement avec 4 avantages exclusifs à durée limitée.</p>
+            </div>
+            <div class="promo-grid">
+                <div class="promo-box">
+                    <div style="font-size: 2.5rem;">📉</div>
+                    <h4>-30% Immédiats</h4>
+                    <p style="font-size: 0.85rem; color:#DDD;">Remise directe sur toutes nos prestations de service.</p>
+                </div>
+                <div class="promo-box">
+                    <div style="font-size: 2.5rem;">🛋️</div>
+                    <h4>Salon Complet</h4>
+                    <p style="font-size: 0.85rem; color:#DDD;">Un salon offert pour meubler et habiller votre nouvel espace.</p>
+                </div>
+                <div class="promo-box">
+                    <div style="font-size: 2.5rem;">🛡️</div>
+                    <h4>Caméra Offerte</h4>
+                    <p style="font-size: 0.85rem; color:#DDD;">Installation gratuite d'un système de vidéosurveillance.</p>
+                </div>
+                <div class="promo-box">
+                    <div style="font-size: 2.5rem;">🧱</div>
+                    <h4>+10% de Matériel</h4>
+                    <p style="font-size: 0.85rem; color:#DDD;">10% de matériel supplémentaire offert sur vos achats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Réalisations / Portfolio -->
+    <section class="section" id="portfolio">
+        <div class="section-header">
+            <span class="section-subtitle">Inspiration</span>
+            <h2 class="section-title">Le Standing que Votre Projet Mérite</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80" alt="Villa Contemporaine">
+                <div class="portfolio-overlay">
+                    <span class="tag">Architecture</span>
+                    <h3>Villas Contemporaines</h3>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Intérieur Moderne">
+                <div class="portfolio-overlay">
+                    <span class="tag">Décoration Intérieure</span>
+                    <h3>Salons & Finitions Haut de Gamme</h3>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Immeuble de Standing">
+                <div class="portfolio-overlay">
+                    <span class="tag">Investissement</span>
+                    <h3>Duplex & Immeubles de Rapport</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="max-width: 900px;">
+        <div class="section-header">
+            <span class="section-subtitle">Transparence</span>
+            <h2 class="section-title">Questions Fréquentes</h2>
+        </div>
+        <details>
+            <summary>Comment bénéficier de l'offre promotionnelle (-30% et Salon offert) ?</summary>
+            <p>Il vous suffit de nous contacter dès maintenant par téléphone ou WhatsApp pour valider votre devis initial. L'offre est appliquée aux nouveaux chantiers engagés durant notre période de lancement.</p>
+        </details>
+        <details>
+            <summary>Intervenez-vous uniquement à Azaguié Ahoua ?</summary>
+            <p>Notre siège est basé à Azaguié Ahoua, mais nos équipes techniques se déplacent sur l'ensemble de la région d'Abidjan et à travers la Côte d'Ivoire selon l'envergure de votre projet architectural.</p>
+        </details>
+        <details>
+            <summary>Le devis initial est-il gratuit ?</summary>
+            <p>Oui, nous analysons vos besoins et établissons une première estimation gratuite pour vous permettre de vous projeter en toute sérénité.</p>
+        </details>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-card">
+            <span class="section-subtitle">Passez à l'action</span>
+            <h2 class="section-title" style="margin-bottom: 20px;">Donnons Vie à Votre Projet</h2>
+            <p style="color: var(--text-muted); margin-bottom: 35px;">Discutez directement avec un expert technique. Évaluation de votre terrain, étude des plans ou choix des matériaux.</p>
+            
+            <div style="margin-bottom: 30px; font-size: 1.1rem;">
+                <p>📍 <strong>Localisation :</strong> AZAGUIE AHOUA</p>
+                <p style="margin-top: 10px;">📞 <strong>Ligne Directe / WhatsApp :</strong> +225 05 55 56 29 49</p>
+            </div>
+
+            <a href="https://wa.me/2250555562949?text=Bonjour,%20je%20souhaite%20échanger%20avec%20un%20expert%20sur%20mon%20projet." target="_blank" class="btn-main" style="display: inline-block; width: 100%;">
+                💬 Démarrer la conversation WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Tous droits réservés — Conception & Construction de Prestige Azaguié Ahoua.</p>
+    </footer>
+
+    <!-- Bouton WhatsApp Flottant -->
+    <a href="https://wa.me/2250555562949?text=Bonjour,%20j'ai%20une%20question%20concernant%20vos%20services." target="_blank" class="float-wa" title="Discuter sur WhatsApp">
+        💬
+    </a>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fenaci 2026 - Tradition et Modernité</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .Fenaci-gradient {
+            background: linear-gradient(135deg, #e64a19 0%, #ff6f00 50%, #d84315 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        
+        @keyframes scrollExposants {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-exposants {
+            display: flex;
+            width: max-content;
+            animation: scrollExposants 25s linear infinite;
+        }
+        .animate-exposants:hover { animation-play-state: paused; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <!-- En-tête Institutionnel (Patronages) -->
+    <div class="w-full bg-gray-900 text-white py-1">
+        <div class="max-w-7xl mx-auto px-4 text-[10px] font-semibold tracking-wider uppercase flex justify-center space-x-6 text-center">
+            <span>Sous le haut patronage du Ministère de la Culture</span>
+            <span class="hidden md:inline">|</span>
+            <span class="hidden md:inline">Ministère du Commerce et de l'Industrie</span>
+        </div>
+    </div>
+
+    <!-- Section En-tête / Logo principal -->
+    <header class="w-full bg-white py-4 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-center px-4">
+            <div class="flex flex-col items-center text-center">
+                <div class="text-5xl font-black tracking-wider text-green-600 flex items-center justify-center">
+                    <span class="text-orange-500 text-6xl font-serif">F</span>ENANCI'
+                </div>
+                <div class="text-xs font-bold text-gray-700 tracking-widest uppercase mt-1">
+                    7<span class="lowercase">e</span> Édition <span class="text-orange-500 font-extrabold text-sm">2026</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barre de Navigation Responsive (Adaptée au cahier des charges) -->
+    <nav class="w-full bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
+            
+            <button id="menu-btn" class="lg:hidden text-orange-500 hover:text-orange-600 focus:outline-none p-2 rounded-md transition-colors">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+
+            <!-- Menu Principal -->
+            <div class="hidden lg:flex items-center space-x-6 text-xs font-bold tracking-wide text-gray-700">
+                <a href="#" class="hover:text-orange-500 transition-colors uppercase text-orange-500">Accueil</a>
+                <a href="#choix-consommateur" class="hover:text-orange-500 transition-colors uppercase">Votez (Localité)</a>
+                <a href="#village-ancestral" class="hover:text-orange-500 transition-colors uppercase">Village Ancestral</a>
+                <a href="#village-moderne" class="hover:text-orange-500 transition-colors uppercase">Village Moderne</a>
+                <a href="#espace-b2b" class="hover:text-orange-500 transition-colors uppercase">Espace Partenaires & B2B</a>
+                <a href="#" class="bg-orange-600 text-white px-4 py-2 rounded-sm hover:bg-orange-700 transition-colors uppercase">Billetterie Cashless</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
+            
+            <!-- Compte à rebours & Raccourcis -->
+            <div class="lg:col-span-1 bg-orange-600 text-white rounded-sm shadow-md overflow-hidden">
+                <div class="bg-orange-700 py-4 px-4 text-center font-bold tracking-wide uppercase text-sm border-b border-orange-500">
+                    Ouverture du Festival
+                </div>
+                <div class="p-6 text-center space-y-4">
+                    <div class="text-3xl font-black tracking-tight">18 SEPT 2026</div>
+                    <div class="text-xs uppercase font-medium tracking-wider text-orange-200">Concept : Tradition et Modernité</div>
+                    <hr class="border-orange-500/50">
+                    <a href="#choix-consommateur" class="block w-full bg-white text-orange-600 hover:bg-gray-100 py-3 font-bold text-xs uppercase rounded transition-all">
+                        Voter pour ma localité
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bannière principale -->
+            <div class="lg:col-span-3 Fenaci-gradient text-white rounded-sm shadow-md p-6 md:p-12 relative flex flex-col justify-between min-h-[380px] overflow-hidden">
+                <div class="absolute inset-0 opacity-10 pointer-events-none mix-blend-overlay bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 h-full w-full">
+                    <div class="flex flex-col items-center md:items-start text-center md:text-left space-y-4 max-w-md">
+                        <div class="bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/20 flex flex-col items-center">
+                            <span class="text-4xl font-black tracking-tight text-white">FENANCI</span>
+                            <span class="text-2xl font-bold text-orange-300">2026</span>
+                            <span class="text-[9px] uppercase tracking-widest text-gray-200 mt-1 text-center font-medium">Salon International de l'Agriculture<br>et des Ressources Animales</span>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 flex flex-col items-center md:items-start space-y-6">
+                        <div>
+                            <span class="bg-blue-600 text-white text-xs font-bold uppercase px-3 py-1 rounded tracking-wider">Thème</span>
+                            <h1 class="text-xl md:text-2xl lg:text-3xl font-extrabold tracking-tight mt-3 uppercase leading-tight">
+                                Quels systèmes de transformation agro-alimentaire pour la souveraineté alimentaire en Afrique ?
+                            </h1>
+                        </div>
+                        <div class="w-full flex flex-wrap items-center gap-4 pt-4 border-t border-white/20 justify-center md:justify-start">
+                            <div class="border border-white/40 rounded px-4 py-2 text-sm font-bold tracking-wide bg-black/10">
+                                18 Septembre &gt; 26 Octobre 2026
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SECTION : LE CHOIX DU CONSOMMATEUR (Cœur de la plateforme) -->
+    <section id="choix-consommateur" class="mt-8 max-w-7xl mx-auto px-4">
+        <div class="bg-white rounded-sm shadow-sm border border-gray-100 p-8">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-black uppercase text-orange-600 font-serif">Compétition : Le Choix du Consommateur</h2>
+                <p class="text-sm text-gray-500 mt-2">Soutenez votre localité parmi les 25 villes en lice. Objectif national : 500 000 voix !</p>
+            </div>
+            
+            <!-- Compteur Global -->
+            <div class="max-w-3xl mx-auto bg-gray-50 p-6 rounded-lg border border-gray-200 text-center mb-8">
+                <h3 class="text-xs font-bold uppercase text-gray-400 mb-2">Voix récoltées en temps réel</h3>
+                <div class="text-5xl font-black text-green-600 tracking-tighter">342 150</div>
+                <div class="w-full bg-gray-200 rounded-full h-4 mt-4 overflow-hidden">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 68%"></div>
+                </div>
+            </div>
+
+            <!-- Formulaire de Vote Rapide -->
+            <form class="max-w-2xl mx-auto flex flex-col md:flex-row gap-4 items-center justify-center bg-orange-50 p-6 rounded-lg border border-orange-100">
+                <select class="w-full md:w-1/3 px-4 py-3 text-sm border border-gray-300 rounded outline-none focus:border-orange-500">
+                    <option value="">Sélectionnez une localité...</option>
+                    <option value="abidjan">Abidjan</option>
+                    <option value="bouake">Bouaké</option>
+                    <option value="korhogo">Korhogo</option>
+                </select>
+                <input type="tel" placeholder="Votre n° de mobile (pour validation)" class="w-full md:w-1/3 px-4 py-3 text-sm border border-gray-300 rounded outline-none focus:border-orange-500">
+                <button type="submit" class="w-full md:w-1/3 bg-orange-600 hover:bg-orange-700 text-white font-bold px-6 py-3 rounded uppercase text-sm transition-colors">
+                    Valider mon vote
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- GRILLE : VILLAGE ANCESTRAL & VILLAGE MODERNE -->
+    <section class="mt-8 max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <!-- Village Ancestral -->
+            <div id="village-ancestral" class="bg-white rounded-sm shadow-sm border border-gray-100 p-8 border-t-4 border-t-amber-700">
+                <h2 class="text-xl font-black uppercase text-amber-800 font-serif mb-4"><i class="fa-solid fa-tree mr-2"></i>Village Ancestral</h2>
+                <p class="text-sm text-gray-600 mb-6">Découvrez les savoir-faire traditionnels et les coopératives féminines de nos régions.</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="aspect-video bg-gray-200 rounded flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                        <img src="https://via.placeholder.com/400x200" alt="Savoir-faire" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity">
+                        <span class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Tissage</span>
+                    </div>
+                    <div class="aspect-video bg-gray-200 rounded flex items-center justify-center relative overflow-hidden group cursor-pointer">
+                        <img src="https://via.placeholder.com/400x200" alt="Transformation" class="object-cover w-full h-full opacity-80 group-hover:opacity-100 transition-opacity">
+                        <span class="absolute bottom-2 left-2 bg-black/60 text-white text-xs px-2 py-1 rounded">Transformation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Village Moderne -->
+            <div id="village-moderne" class="bg-white rounded-sm shadow-sm border border-gray-100 p-8 border-t-4 border-t-blue-600">
+                <h2 class="text-xl font-black uppercase text-blue-700 font-serif mb-4"><i class="fa-solid fa-industry mr-2"></i>Village Moderne</h2>
+                <p class="text-sm text-gray-600 mb-6">Explorez le catalogue des technologies de transformation et les exposants industriels.</p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-center text-sm text-gray-700"><i class="fa-solid fa-check text-green-500 mr-2"></i> Machinisme agricole</li>
+                    <li class="flex items-center text-sm text-gray-700"><i class="fa-solid fa-check text-green-500 mr-2"></i> Partenaires techniques</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded uppercase hover:bg-blue-700">Devenir Exposant</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ESPACE B2B & SPEED MEETINGS -->
+    <section id="espace-b2b" class="mt-8 max-w-7xl mx-auto px-4 mb-12">
+        <div class="bg-purple-900 text-white rounded-sm shadow-md p-8 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="max-w-lg">
+                <h2 class="text-2xl font-black uppercase font-serif mb-2">Portail B2B & Investisseurs</h2>
+                <p class="text-sm text-purple-200 mb-4">Mairies, Conseils régionaux et Investisseurs : Planifiez vos rendez-vous d'affaires (Speed-Meetings) dès aujourd'hui.</p>
+                <a href="#" class="bg-white text-purple-900 px-6 py-3 rounded text-sm font-bold uppercase inline-block hover:bg-gray-100 transition-colors">Programmer un Speed-Meeting</a>
+            </div>
+            <div class="text-6xl text-purple-500 opacity-50">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER PRINCIPAL -->
+    <footer class="w-full text-white font-sans text-xs mt-12">
+        <!-- Partie Haute -->
+        <div class="bg-[#d24726] px-6 py-12 md:py-16 md:px-16">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-wider font-serif">A propos</h3>
+                    <div class="text-2xl font-black font-serif">FENACI 2026</div>
+                    <div class="space-y-3">
+                        <span class="block text-xs font-black uppercase tracking-wider font-serif">Support Technique & Contact</span>
+                        <p>Besoin d'aide pour le paiement Cashless ou les formulaires ? Contactez-nous.</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-wider font-serif">Liens institutionnels</h3>
+                    <ul class="space-y-4 font-medium text-[11px] leading-relaxed">
+                        <li><a href="#" class="hover:underline">Ministère de la Culture</a></li>
+                        <li><a href="#" class="hover:underline">Ministère du Commerce et de l'Industrie</a></li>
+                        <li><a href="#" class="hover:underline">Règlement des compétitions (Mentions légales)</a></li>
+                        <li><a href="#" class="hover:underline">Politique de confidentialité (Données B2B)</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6">
+                    <h3 class="text-sm font-black uppercase tracking-wider font-serif">Siege commercial</h3>
+                    <div class="space-y-4 font-medium text-[11px] border-t border-white/20 pt-1">
+                        <div class="flex items-start space-x-3 py-2">
+                            <i class="fa-solid fa-location-dot mt-0.5 shrink-0 text-sm"></i>
+                            <p class="leading-tight">Riviera 2, face au collège André Malraux<br>SCI PAUL</p>
+                        </div>
+                        <div class="flex items-center space-x-3 py-2">
+                            <i class="fa-brands fa-whatsapp shrink-0 text-sm"></i>
+                            <p>Assistance WhatsApp : +225 07 49 49 40 40</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partie Basse -->
+        <div class="bg-[#6b2c18] py-4 px-6 text-center text-[10px] tracking-wide text-gray-200/90 font-medium">
+            © 2026 Fenaci. Tous droits réservés. Plateforme digitale optimisée pour mobile.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'hidden lg:hidden bg-white border-b border-gray-200 px-4 py-3 space-y-2';
+        mobileMenu.innerHTML = `
+            <a href="#" class="block py-2 text-orange-500 font-bold uppercase text-sm">Accueil</a>
+            <a href="#choix-consommateur" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Votez (Localité)</a>
+            <a href="#village-ancestral" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Village Ancestral</a>
+            <a href="#village-moderne" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">Village Moderne</a>
+            <a href="#espace-b2b" class="block py-2 text-gray-700 font-medium hover:text-orange-500 uppercase text-sm">B2B & Partenaires</a>
+        `;
+        document.querySelector('nav').appendChild(mobileMenu);
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
