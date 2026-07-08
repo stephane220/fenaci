@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Univers Design Sarl - Construisez, Décorez, Donnez Vie</title>
-    <!-- Font Awesome pour les icônes -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Nos Réalisations | Univers Design Sarl Construction</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Montserrat', sans-serif; }
+    .filter-btn.active {
+      background-color: #ea580c; /* orange-600 */
+      color: white;
+      border-color: #ea580c;
+    }
+      <style>
         /* --- VARIABLES ET RESET --- */
         :root {
             --primary: #0A2540; /* Bleu nuit élégant */
@@ -580,181 +588,147 @@ left:0;
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ... (Insérez ici tout le corps HTML de votre code précédent : Hero, Services, Promo, Footer) ... -->
-    
-    
 
 
 
 
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
     <header id="hero" class="hero">
-        <h1>Univers Design <span>Sarl</span></h1>
+        <h1 class="font-bold">NOS <span>PROJETS<br></span>RECENTS <span></span></h1>
         <p>CONSTRUISEZ, DÉCOREZ ET DONNEZ VIE À VOS PROJETS</p>
     </header>
 
+    <br>
+    <br>
 
+        <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold text-blue-950 uppercase tracking-wide">NOS PROJETS RÉCENTS</h2>
+      <div class="w-24 h-1 bg-orange-500 mx-auto mt-3 rounded"></div>
+    </div>
 
-    
+    <div class="flex flex-wrap justify-center gap-3 mb-16">
+      <button onclick="filterProjects('all')" class="filter-btn active px-6 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition duration-300 text-sm shadow-sm">
+        Tout voir
+      </button>
+      <button onclick="filterProjects('batiment')" class="filter-btn px-6 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition duration-300 text-sm shadow-sm">
+        Bâtiment & Gros Œuvre
+      </button>
+      <button onclick="filterProjects('decor')" class="filter-btn px-6 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition duration-300 text-sm shadow-sm">
+        Décoration & Staff
+      </button>
+      <button onclick="filterProjects('plans')" class="filter-btn px-6 py-2.5 rounded-full border border-blue-900 text-blue-900 font-semibold hover:bg-orange-600 hover:text-white hover:border-orange-600 transition duration-300 text-sm shadow-sm">
+        Plans & Infographie 3D
+      </button>
+    </div>
 
-    <!-- DOMAINES D'INTERVENTION -->
-    <section class="section-padding container">
-        <h2 class="section-title reveal">Nos Domaines d'Intervention</h2>
-        <div class="services-grid">
-            
-                  <!-- Carte 1 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Construction de maison et villa moderne" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-building"></i></div>
-    <div class="service-content">
-        <h3>Entrepreneur en bâtiment</h3>
-        <p>Maisons, Villas, Duplex, Immeubles. Des fondations solides pour vos rêves.</p>
-    </div>
-</div>
-
-            <!-- Carte 2 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Décoration intérieure moderne et élégante" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
-    <div class="service-content">
-        <h3>Décoration intérieure</h3>
-        <p>Sublimez vos espaces de vie avec élégance et modernité.</p>
-    </div>
-</div>
-
-            <!-- Carte 3 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Travaux de peinture et finitions murales design" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
-    <div class="service-content">
-        <h3>Designer artiste Peinture</h3>
-        <p>Des couleurs et des textures uniques pour donner du caractère à vos murs.</p>
-    </div>
-</div>
-
-            <!-- Carte 4 -->
-           <div class="service-card reveal">
-    <div class="service-img-container">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Moulures et staff décoratif sur plafond et murs" class="service-img">
-
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-landmark"></i></div>
-    <div class="service-content">
-        <h3>Staff décoratif</h3>
-        <p>Réalisation de plafonds suspendus, moulures et ornements architecturaux.</p>
-    </div>
-</div>
-
-            <!-- Carte 5 -->
-           <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Dessin de plans d'architecte et blueprint de bâtiment" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-    <div class="service-content">
-        <h3>Dessin de plans de bâtiments</h3>
-        <p>Conception sur mesure de plans de bâtiments précis et réglementaires.</p>
-    </div>
-</div>
-
-            <!-- Carte 6 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Conception de logo vectoriel et infographie de marque" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-bezier-curve"></i></div>
-    <div class="service-content">
-        <h3>Confection de Logos</h3>
-        <p>Conception de logos, infographie professionnelle et calligraphie.</p>
-    </div>
-</div>
-
-            <!-- Carte 7 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Pose et alignement de carrelage avec croisillons par un artisan" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
-    <div class="service-content">
-        <h3>Carrelage</h3>
-        <p>Pose professionnelle pour des sols et murs aux finitions impeccables.</p>
-    </div>
-</div>
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?auto=format&fit=crop&w=600&q=80" alt="Art de la calligraphie et écriture manuscrite" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
-    <div class="service-content">
-        <h3>Calligraphie</h3>
-        <p>L'art de l'écriture manuscrite pour donner une touche unique, artistique et prestigieuse à vos projets.</p>
-    </div>
-</div>
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Conception et réalisation de projet architectural" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
-    <div class="service-content">
-        <h3>Conception-Réalisation</h3>
-        <p>Une prise en charge globale de votre projet, de l'esquisse architecturale jusqu'à la livraison clés en main.</p>
-    </div>
-</div>
+    <div id="projects-grid" class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+      
+      <div class="project-item batiment bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="relative h-64 overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Villa Moderne" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded shadow">Bâtiment</div>
         </div>
-    </section>
-
-    <!-- BANNIÈRE PROMO ANIMÉE -->
-    <div class="container section-padding">
-        <div class="promo-section reveal">
-            <h2>🎉 OFFRE SPÉCIALE DE LANCEMENT</h2>
-            <p style="font-size: 1.2rem;">Pour tous vos nouveaux projets, profitez d'avantages exceptionnels pour une durée limitée :</p>
-            
-            <div class="promo-grid">
-                <div class="promo-item">
-                    <i class="fa-solid fa-percent"></i>
-                    <h3>30% de Réduction</h3>
-                    <p>Sur l'ensemble de nos prestations.</p>
-                </div>
-                <div class="promo-item">
-                    <i class="fa-solid fa-couch"></i>
-                    <h3>Un Salon Offert</h3>
-                    <p>Salon complet offert pour tout chantier éligible.</p>
-                </div>
-                <div class="promo-item">
-                    <i class="fa-solid fa-video"></i>
-                    <h3>Sécurité Offerte</h3>
-                    <p>Une caméra de surveillance offerte avec installation.</p>
-                </div>
-                <div class="promo-item">
-                    <i class="fa-solid fa-cart-flatbed"></i>
-                    <h3>10% de Matériel</h3>
-                    <p>Offert sur l'ensemble de vos achats.</p>
-                </div>
-            </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-950 mb-2">Villa Résidentielle Luxueuse</h3>
+          <p class="text-gray-600 text-sm mb-4">Construction clé en main d'un duplex contemporain avec finitions haut de gamme.</p>
+          <div class="flex items-center text-xs text-gray-500 font-semibold border-t pt-4">
+            <span class="mr-4"><i class="fa-solid fa-location-dot text-orange-500 mr-1"></i> Abidjan, CI</span>
+            <span><i class="fa-solid fa-calendar-days text-orange-500 mr-1"></i> 2025</span>
+          </div>
         </div>
+      </div>
+
+      <div class="project-item decor bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="relative h-64 overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Salon Design" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute top-4 left-4 bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded shadow">Décoration</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-950 mb-2">Aménagement Salon Penthouse</h3>
+          <p class="text-gray-600 text-sm mb-4">Design d'intérieur complet, mobilier sur mesure et jeux de lumières d'ambiance.</p>
+          <div class="flex items-center text-xs text-gray-500 font-semibold border-t pt-4">
+            <span class="mr-4"><i class="fa-solid fa-location-dot text-orange-500 mr-1"></i> Paris, FR</span>
+            <span><i class="fa-solid fa-calendar-days text-orange-500 mr-1"></i> 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item plans bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="relative h-64 overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1545670723-196ed0954986?auto=format&fit=crop&w=600&q=80" alt="Infographie 3D" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded shadow">Plans & 3D</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-950 mb-2">Modélisation 3D Complexe Immeuble</h3>
+          <p class="text-gray-600 text-sm mb-4">Conception des plans architecturaux et rendu photoréaliste R+4 pour investisseurs.</p>
+          <div class="flex items-center text-xs text-gray-500 font-semibold border-t pt-4">
+            <span class="mr-4"><i class="fa-solid fa-location-dot text-orange-500 mr-1"></i> En ligne</span>
+            <span><i class="fa-solid fa-calendar-days text-orange-500 mr-1"></i> 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item decor bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="relative h-64 overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Plafond Staff" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute top-4 left-4 bg-blue-900 text-white text-xs font-bold px-3 py-1 rounded shadow">Décoration</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-950 mb-2">Plafonds suspendus & Staff</h3>
+          <p class="text-gray-600 text-sm mb-4">Pose de moulures artisanales et création de plafonds suspendus décoratifs rétro-éclairés.</p>
+          <div class="flex items-center text-xs text-gray-500 font-semibold border-t pt-4">
+            <span class="mr-4"><i class="fa-solid fa-location-dot text-orange-500 mr-1"></i> Dakar, SN</span>
+            <span><i class="fa-solid fa-calendar-days text-orange-500 mr-1"></i> 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item batiment bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="relative h-64 overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80" alt="Chantier Carrelage" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute top-4 left-4 bg-orange-500 text-white text-xs font-bold px-3 py-1 rounded shadow">Bâtiment</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-950 mb-2">Rénovation de Sols Industriels</h3>
+          <p class="text-gray-600 text-sm mb-4">Pose de carrelage grand format haute résistance et finitions de maçonnerie.</p>
+          <div class="flex items-center text-xs text-gray-500 font-semibold border-t pt-4">
+            <span class="mr-4"><i class="fa-solid fa-location-dot text-orange-500 mr-1"></i> San-Pédro, CI</span>
+            <span><i class="fa-solid fa-calendar-days text-orange-500 mr-1"></i> 2024</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-item plans bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+        <div class="relative h-64 overflow-hidden group">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Plans d'architecte" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded shadow">Plans & 3D</div>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-blue-950 mb-2">Plans d'Urbanisme & Logements</h3>
+          <p class="text-gray-600 text-sm mb-4">Conception de plans d'exécution réglementaires pour un lotissement éco-responsable.</p>
+          <div class="flex items-center text-xs text-gray-500 font-semibold border-t pt-4">
+            <span class="mr-4"><i class="fa-solid fa-location-dot text-orange-500 mr-1"></i> Abidjan, CI</span>
+            <span><i class="fa-solid fa-calendar-days text-orange-500 mr-1"></i> 2025</span>
+          </div>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-    <!-- POURQUOI NOUS CHOISIR -->
-    <section class="features section-padding">
-        <div class="container">
-            <h2 class="section-title reveal">Pourquoi choisir Univers Design Sarl ?</h2>
-            <div class="features-grid">
-                <div class="feature-item reveal"><i class="fa-solid fa-check-circle"></i> <h3>Travail de qualité irréprochable</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-clock"></i> <h3>Respect strict des délais</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-users-gear"></i> <h3>Personnel hautement expérimenté</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-handshake-angle"></i> <h3>Accompagnement personnalisé</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-wallet"></i> <h3>Solutions adaptées à votre budget</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-medal"></i> <h3>Satisfaction 100% garantie</h3></div>
-            </div>
-        </div>
-    </section>
+  <section class="bg-blue-950 text-white py-16 px-4 text-center">
+    <div class="max-w-3xl mx-auto">
+      <h3 class="text-3xl font-bold mb-4">Vous avez un projet similaire en tête ?</h3>
+      <p class="text-gray-300 mb-8 text-sm md:text-base">Nos experts sont à votre disposition pour analyser vos besoins et concevoir un devis gratuit et sur mesure.</p>
+      <a href ="https://wa.me/2250142980741" class="bg-orange-600 text-white px-8 py-3.5 font-bold hover:bg-orange-500 transition duration-300 rounded shadow-lg uppercase text-sm tracking-wider">
+        Contactez notre équipe
+      </a>
 
+     
+    </div>
+  </section>
+
+  
     <!-- FOOTER ET CONTACTS -->
     <footer id="contact">
         <div class="container">
@@ -825,14 +799,35 @@ menu.innerHTML='<i class="fas fa-bars"></i>';
 
 }
 
+
+
+
+
+
+
+
+
+    function filterProjects(category) {
+      // Gérer l'état actif des boutons
+      const buttons = document.querySelectorAll('.filter-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+
+      // Filtrer les éléments de la grille
+      const items = document.querySelectorAll('.project-item');
+      items.forEach(item => {
+        if (category === 'all') {
+          item.style.display = 'block';
+        } else {
+          if (item.classList.contains(category)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        }
+      });
+    }
+  
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-

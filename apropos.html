@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* --- VARIABLES ET RESET --- */
         :root {
@@ -580,182 +584,192 @@ left:0;
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- ... (Insérez ici tout le corps HTML de votre code précédent : Hero, Services, Promo, Footer) ... -->
-    
-    
 
 
 
 
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
     <header id="hero" class="hero">
-        <h1>Univers Design <span>Sarl</span></h1>
+        <h1>A <span>PROPOS d'<br></span>Univers Design <span>Sarl</span></h1>
         <p>CONSTRUISEZ, DÉCOREZ ET DONNEZ VIE À VOS PROJETS</p>
     </header>
 
 
 
+
+
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+      <div class="relative order-2 md:order-1">
+        <div class="absolute -top-6 -left-6 w-32 h-32 bg-orange-500 z-0 rounded-lg"></div>
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" alt="Chantier de Construction" class="relative z-10 w-full rounded-lg shadow-2xl object-cover h-[400px]">
+      </div>
+
+      <div class="order-1 md:order-2">
+        <span class="text-orange-500 text-sm font-bold uppercase tracking-wider block mb-2">// NOTRE MISSION</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-blue-900">Univers Design Sarl, une entreprise de construction d'excellence depuis 1975</h2>
+        <p class="text-gray-600 mb-6 leading-relaxed">
+          Notre mission principale est de concevoir et de bâtir des infrastructures durables qui soutiennent le développement de nos communautés. Nous mettons un point d'honneur à allier innovation technique, sécurité absolue sur nos chantiers et respect rigoureux des délais.
+        </p>
+        <p class="text-gray-600 mb-8 leading-relaxed">
+          Qu'il s'agisse de projets industriels complexes ou de bâtiments résidentiels, nous traduisons vos visions en structures concrètes grâce à notre ingénierie de pointe.
+        </p>
+        <button class="bg-blue-900 text-white px-8 py-3 font-bold hover:bg-orange-500 transition duration-300 rounded shadow-md">
+          EN SAVOIR PLUS
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-gray-100 py-20 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-orange-500 text-sm font-bold uppercase tracking-wider block mb-2">// AVANTAGES</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Pourquoi faire confiance à Univers Design Sarl ?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-blue-900">
+          <div class="text-orange-500 text-3xl mb-4">🏆</div>
+          <h3 class="text-xl font-bold mb-3 text-blue-900">Expertise Reconnue</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Plus de 50 ans d'expérience dans le secteur industriel et civil, garantissant une maîtrise parfaite de chaque projet.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-orange-500">
+          <div class="text-blue-900 text-3xl mb-4">⚙️</div>
+          <h3 class="text-xl font-bold mb-3 text-blue-900">Technologies Modernes</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Nous utilisons des équipements de pointe et des matériaux durables pour assurer la pérennité de vos ouvrages.</p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md border-t-4 border-blue-900">
+          <div class="text-orange-500 text-3xl mb-4">🤝</div>
+          <h3 class="text-xl font-bold mb-3 text-blue-900">Accompagnement Client</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Un interlocuteur unique vous accompagne de la phase d'étude jusqu'à la remise finale des clés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      
+      <div class="relative">
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-900 z-0 rounded-lg"></div>
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Équipe d'ingénieurs" class="relative z-10 w-full rounded-lg shadow-2xl object-cover h-[420px]">
+      </div>
+
+      <div>
+        <span class="text-orange-500 text-sm font-bold uppercase tracking-wider block mb-2">// NOS FONDATIONS</span>
+        <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-900">Les valeurs qui dictent nos actions</h2>
+        
+        <div class="space-y-6">
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-900 font-bold">01</div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-1">Qualité Sans Compromis</h4>
+              <p class="text-gray-600 text-sm">Chaque brique posée et chaque structure coulée répond aux normes internationales de sécurité les plus strictes.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center text-orange-600 font-bold">02</div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-1">Transparence Totale</h4>
+              <p class="text-gray-600 text-sm">Pas de coûts cachés. Nous fournissons des rapports budgétaires et des plannings d'avancement clairs et réguliers.</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div class="flex-shrink-0 bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-900 font-bold">03</div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-1">Engagement Éco-responsable</h4>
+              <p class="text-gray-600 text-sm">Nous intégrons des pratiques de construction verte afin de réduire l'empreinte carbone de nos chantiers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
     
+  </section>
 
-    <!-- DOMAINES D'INTERVENTION -->
-    <section class="section-padding container">
-        <h2 class="section-title reveal">Nos Domaines d'Intervention</h2>
-        <div class="services-grid">
-            
-                  <!-- Carte 1 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Construction de maison et villa moderne" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-building"></i></div>
-    <div class="service-content">
-        <h3>Entrepreneur en bâtiment</h3>
-        <p>Maisons, Villas, Duplex, Immeubles. Des fondations solides pour vos rêves.</p>
-    </div>
-</div>
-
-            <!-- Carte 2 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&q=80" alt="Décoration intérieure moderne et élégante" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-couch"></i></div>
-    <div class="service-content">
-        <h3>Décoration intérieure</h3>
-        <p>Sublimez vos espaces de vie avec élégance et modernité.</p>
-    </div>
-</div>
-
-            <!-- Carte 3 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Travaux de peinture et finitions murales design" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-paint-roller"></i></div>
-    <div class="service-content">
-        <h3>Designer artiste Peinture</h3>
-        <p>Des couleurs et des textures uniques pour donner du caractère à vos murs.</p>
-    </div>
-</div>
-
-            <!-- Carte 4 -->
-           <div class="service-card reveal">
-    <div class="service-img-container">
-                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Moulures et staff décoratif sur plafond et murs" class="service-img">
-
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-landmark"></i></div>
-    <div class="service-content">
-        <h3>Staff décoratif</h3>
-        <p>Réalisation de plafonds suspendus, moulures et ornements architecturaux.</p>
-    </div>
-</div>
-
-            <!-- Carte 5 -->
-           <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=600&q=80" alt="Dessin de plans d'architecte et blueprint de bâtiment" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-    <div class="service-content">
-        <h3>Dessin de plans de bâtiments</h3>
-        <p>Conception sur mesure de plans de bâtiments précis et réglementaires.</p>
-    </div>
-</div>
-
-            <!-- Carte 6 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Conception de logo vectoriel et infographie de marque" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-bezier-curve"></i></div>
-    <div class="service-content">
-        <h3>Confection de Logos</h3>
-        <p>Conception de logos, infographie professionnelle et calligraphie.</p>
-    </div>
-</div>
-
-            <!-- Carte 7 -->
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Pose et alignement de carrelage avec croisillons par un artisan" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
-    <div class="service-content">
-        <h3>Carrelage</h3>
-        <p>Pose professionnelle pour des sols et murs aux finitions impeccables.</p>
-    </div>
-</div>
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1564951434112-64d74cc2a2d7?auto=format&fit=crop&w=600&q=80" alt="Art de la calligraphie et écriture manuscrite" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
-    <div class="service-content">
-        <h3>Calligraphie</h3>
-        <p>L'art de l'écriture manuscrite pour donner une touche unique, artistique et prestigieuse à vos projets.</p>
-    </div>
-</div>
-            <div class="service-card reveal">
-    <div class="service-img-container">
-        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80" alt="Conception et réalisation de projet architectural" class="service-img">
-    </div>
-    <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
-    <div class="service-content">
-        <h3>Conception-Réalisation</h3>
-        <p>Une prise en charge globale de votre projet, de l'esquisse architecturale jusqu'à la livraison clés en main.</p>
-    </div>
-</div>
+ 
+<!-- Section 3 : Nos Valeurs (Texte à gauche, Image à droite) -->
+<section class="py-20 px-4 bg-white">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- CONTENU TEXTE (À gauche sur PC, premier sur mobile) -->
+    <div class="order-1 md:order-1">
+      <span class="text-orange-500 text-sm font-bold uppercase tracking-wider block mb-2">// Pourquoi nous choisir</span>
+      <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-900">Les raisons qui dictent nos actions</h2>
+      
+      <div class="space-y-6">
+        <!-- Valeur 1 -->
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-900 font-bold">01</div>
+          <div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">Qualité Sans Compromis</h4>
+            <p class="text-gray-600 text-sm">Chaque brique posée et chaque structure coulée répond aux normes internationales de sécurité les plus strictes.</p>
+          </div>
         </div>
-    </section>
-
-    <!-- BANNIÈRE PROMO ANIMÉE -->
-    <div class="container section-padding">
-        <div class="promo-section reveal">
-            <h2>🎉 OFFRE SPÉCIALE DE LANCEMENT</h2>
-            <p style="font-size: 1.2rem;">Pour tous vos nouveaux projets, profitez d'avantages exceptionnels pour une durée limitée :</p>
-            
-            <div class="promo-grid">
-                <div class="promo-item">
-                    <i class="fa-solid fa-percent"></i>
-                    <h3>30% de Réduction</h3>
-                    <p>Sur l'ensemble de nos prestations.</p>
-                </div>
-                <div class="promo-item">
-                    <i class="fa-solid fa-couch"></i>
-                    <h3>Un Salon Offert</h3>
-                    <p>Salon complet offert pour tout chantier éligible.</p>
-                </div>
-                <div class="promo-item">
-                    <i class="fa-solid fa-video"></i>
-                    <h3>Sécurité Offerte</h3>
-                    <p>Une caméra de surveillance offerte avec installation.</p>
-                </div>
-                <div class="promo-item">
-                    <i class="fa-solid fa-cart-flatbed"></i>
-                    <h3>10% de Matériel</h3>
-                    <p>Offert sur l'ensemble de vos achats.</p>
-                </div>
-            </div>
+        
+        <!-- Valeur 2 -->
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 bg-orange-100 w-12 h-12 rounded-full flex items-center justify-center text-orange-600 font-bold">02</div>
+          <div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">Transparence Totale</h4>
+            <p class="text-gray-600 text-sm">Pas de coûts cachés. Nous fournissons des rapports budgétaires et des plannings d'avancement clairs et réguliers.</p>
+          </div>
         </div>
+
+        <!-- Valeur 3 -->
+        <div class="flex gap-4">
+          <div class="flex-shrink-0 bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-900 font-bold">03</div>
+          <div>
+            <h4 class="text-lg font-bold text-gray-900 mb-1">Engagement Éco-responsable</h4>
+            <p class="text-gray-600 text-sm">Nous intégrons des pratiques de construction verte afin de réduire l'empreinte carbone de nos chantiers.</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- POURQUOI NOUS CHOISIR -->
-    <section class="features section-padding">
-        <div class="container">
-            <h2 class="section-title reveal">Pourquoi choisir Univers Design Sarl ?</h2>
-            <div class="features-grid">
-                <div class="feature-item reveal"><i class="fa-solid fa-check-circle"></i> <h3>Travail de qualité irréprochable</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-clock"></i> <h3>Respect strict des délais</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-users-gear"></i> <h3>Personnel hautement expérimenté</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-handshake-angle"></i> <h3>Accompagnement personnalisé</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-wallet"></i> <h3>Solutions adaptées à votre budget</h3></div>
-                <div class="feature-item reveal"><i class="fa-solid fa-medal"></i> <h3>Satisfaction 100% garantie</h3></div>
-            </div>
-        </div>
-    </section>
+    <!-- IMAGE (À droite sur PC, deuxième sur mobile) -->
+    <div class="relative order-2 md:order-2">
+      <!-- Élément décoratif en arrière-plan -->
+      <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-blue-900 z-0 rounded-lg"></div>
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Équipe d'ingénieurs" class="relative z-10 w-full rounded-lg shadow-2xl object-cover h-[420px]">
+    </div>
 
-    <!-- FOOTER ET CONTACTS -->
+  </div>
+</section>
+
+
+
+<section class="bg-blue-900 py-16 text-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2 text-orange-400">50+</div>
+        <div class="text-xs uppercase tracking-widest opacity-80">Années d'expérience</div>
+      </div>
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2 text-orange-400">1200+</div>
+        <div class="text-xs uppercase tracking-widest opacity-80">Projets réalisés</div>
+      </div>
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2 text-orange-400">300+</div>
+        <div class="text-xs uppercase tracking-widest opacity-80">Experts qualifiés</div>
+      </div>
+      <div class="p-4">
+        <div class="text-4xl font-bold mb-2 text-orange-400">100%</div>
+        <div class="text-xs uppercase tracking-widest opacity-80">Clients satisfaits</div>
+      </div>
+    </div>
+  </section>
+
+   <!-- FOOTER ET CONTACTS -->
     <footer id="contact">
         <div class="container">
             <div class="footer-grid">
