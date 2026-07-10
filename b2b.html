@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Professionnel B2B | FENACI 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-slate-100">
+    <!-- NAVIGATION PROFESSIONNELLE -->
+    <nav class="bg-slate-950 border-b border-slate-800 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-xs font-bold uppercase">
+            <a href="index.html" class="text-orange-500 text-lg font-black tracking-wide">FENACI B2B</a>
+            <div class="space-x-4">
+                <a href="index.html" class="text-slate-400 hover:text-white">Retour au Portail public</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-indigo-950 border border-indigo-800 rounded-xl p-6 md:p-8 shadow-2xl relative mb-8">
+            <span class="bg-indigo-600 text-white text-[9px] font-bold uppercase px-2 py-0.5 rounded tracking-widest">Accès Régulé</span>
+            <h1 class="text-2xl font-black uppercase mt-2 font-serif tracking-tight text-white">Speed-Meetings & Opportunités d'Investissements</h1>
+            <p class="text-xs text-indigo-200 mt-2 leading-relaxed">
+                Espace de réseautage direct dédié aux Conseils Régionaux, Municipalités, Groupements de Producteurs et Acheteurs Internationaux.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Formulaire de demande de rendez-vous -->
+            <div class="bg-slate-950 border border-slate-800 p-6 rounded-lg md:col-span-2 space-y-4">
+                <h2 class="text-xs font-bold uppercase text-slate-300 border-b border-slate-800 pb-2"><i class="fa-solid fa-calendar-check mr-2 text-indigo-400"></i>Solliciter un Créneau d'Affaires</h2>
+                <form class="space-y-3 text-xs">
+                    <div>
+                        <label class="block text-slate-400 font-semibold mb-1">Institution / Raison Sociale</label>
+                        <input type="text" required placeholder="Ex: Conseil Régional du Poro" class="w-full bg-slate-900 border border-slate-700 text-white px-3 py-2 rounded focus:border-indigo-500 outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-slate-400 font-semibold mb-1">Profil Professionnel</label>
+                        <select class="w-full bg-slate-900 border border-slate-700 text-white px-3 py-2 rounded focus:border-indigo-500 outline-none">
+                            <option>Investisseur Privé International</option>
+                            <option>Collectivité Territoriale / Mairie</option>
+                            <option>Coopérative Agricole Exportatrice</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold uppercase py-2 rounded mt-2 transition-colors">Soumettre ma demande d'accréditation</button>
+                </form>
+            </div>
+
+            <!-- Filtrage QR Code -->
+            <div class="bg-slate-950 border border-slate-800 p-6 rounded-lg flex flex-col items-center justify-center text-center">
+                <div class="p-4 bg-white rounded-lg shadow-inner mb-4">
+                    <i class="fa-solid fa-qrcode text-5xl text-slate-900"></i>
+                </div>
+                <h3 class="text-xs font-bold uppercase text-white">Badge Numérique QR Code</h3>
+                <p class="text-[11px] text-slate-400 mt-2 leading-normal">
+                    Chaque session validée génère un badge QR unique envoyé par email. Ce badge est requis pour franchir les sas de contrôle de l'Espace B2B.
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

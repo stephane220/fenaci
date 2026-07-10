@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Prix FENACI | Vote en Ligne</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-xs font-bold uppercase">
+            <a href="index.html" class="text-green-600 text-lg font-black">FENACI 2026</a>
+            <div class="space-x-4">
+                <a href="index.html" class="text-gray-600">Accueil</a>
+                <a href="village-ancestral.html" class="text-gray-600">Village Ancestral</a>
+                <a href="village-moderne.html" class="text-gray-600">Village Moderne</a>
+                <a href="votes.html" class="text-orange-500">Votes</a>
+                <a href="b2b.html" class="text-gray-600">Espace B2B</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-4 py-10">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+            <h1 class="text-2xl font-black text-orange-600 uppercase font-serif">Vote National — Grand Prix FENACI 2026</h1>
+            <p class="text-xs text-gray-500 mt-1">Soutenez de manière vérifiée l'excellence de notre secteur vivrier et coopératif.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <!-- Compteur National -->
+            <div class="bg-white border border-gray-200 p-5 rounded-lg text-center shadow-sm md:col-span-1 flex flex-col justify-center">
+                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Total des Suffrages</span>
+                <div class="text-3xl font-black text-green-600 font-mono my-2">342 159</div>
+                <div class="w-full bg-gray-100 rounded-full h-2">
+                    <div class="bg-green-500 h-2 rounded-full" style="width: 68%"></div>
+                </div>
+                <span class="text-[9px] text-gray-400 font-semibold mt-2">Objectif de validation : 500 000 votes</span>
+            </div>
+
+            <!-- Formulaire OTP -->
+            <div class="bg-white border border-orange-200 p-6 rounded-lg shadow-sm md:col-span-2">
+                <h2 class="text-xs font-bold uppercase text-gray-700 border-b pb-2 mb-4"><i class="fa-solid fa-shield-halved mr-2 text-orange-500"></i>Formulaire de Vote Sécurisé (Anti-Sybil)</h2>
+                <form onsubmit="triggerOTP(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1">Sélectionner votre Lauréat</label>
+                        <select required class="w-full bg-white border border-gray-300 text-xs px-3 py-2 rounded focus:border-orange-500 outline-none">
+                            <option value="">-- Sélectionner une entité --</option>
+                            <option value="1">Coopérative COOP-CA Élite (Cacao - Soubré)</option>
+                            <option value="2">Société Africaine de Transformation (SAT)</option>
+                            <option value="3">Femmes Battantes de Bouaké (Anacarde)</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-gray-500 mb-1">Numéro de Téléphone Réseau Ivoirien</label>
+                        <div class="flex">
+                            <span class="inline-flex items-center px-3 rounded-l border border-r-0 border-gray-300 bg-gray-100 text-gray-500 text-xs font-bold">+225</span>
+                            <input type="tel" pattern="[0-9]{10}" required placeholder="07xxxxxxxx" class="w-full bg-white border border-gray-300 text-xs px-3 py-2 rounded-r focus:border-orange-500 outline-none">
+                        </div>
+                    </div>
+                    <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs uppercase py-2.5 rounded shadow transition-colors">Voter & Recevoir le code SMS</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function triggerOTP(e) { e.preventDefault(); alert("🔒 Sécurité FENACI : Un code de contrôle temporaire OTP vous a été acheminé par SMS pour valider votre voix."); }
+    </script>
+</body>
+</html>

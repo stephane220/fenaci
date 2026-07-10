@@ -44,14 +44,14 @@
             <!-- Menu Horizontal - VISIBLE PAR DÉFAUT SUR GRAND ÉCRAN (hidden lg:flex) -->
             <div class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide text-gray-700">
                 <a href="https://Fenaci.ci/" class="hover:text-orange-500 transition-colors uppercase text-orange-500">Accueil</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Vivre le Fenaci</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Le Fenaci +</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Exposants +</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Sponsors +</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">B2B +</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Espace Média +</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Infos Pratiques +</a>
-                <a href="#" class="hover:text-orange-500 transition-colors uppercase">Nous Contacter</a>
+                <a href="village-ancestral.html" class="hover:text-orange-500 transition-colors uppercase">Village Ancestral</a>
+                <a href="village-moderne.html" class="hover:text-orange-500 transition-colors uppercase">Village Moderne</a>
+                <a href="votes.html" class="hover:text-orange-500 transition-colors uppercase">Système de Vote</a>
+                <a href="b2b.html" class="hover:text-orange-500 transition-colors uppercase">Espace B2B</a>
+                
+                <a href="presse-faq.html" class="hover:text-orange-500 transition-colors uppercase">Espace Presse / FAQ</a>
+               
+                <a href="contact.html" class="hover:text-orange-500 transition-colors uppercase">Nous Contacter</a>
             </div>
 
             <!-- Sélecteur de Langue Dropdown -->
@@ -151,6 +151,60 @@
 
         </div>
     </main>
+
+        <!-- SECTION : MODULE DE VOTE ANTI-FRAUDE (OBJECTIF 500 000 VOIX) -->
+    <section id="vote-section" class="max-w-7xl mx-auto px-4 mt-8">
+        <div class="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+            <h2 class="text-xl font-black text-orange-600 uppercase tracking-wide mb-2 text-center font-serif"><i class="fa-solid fa-check-to-slot mr-2"></i>Grand Prix FENACI 2026 - Système de Vote National</h2>
+            <p class="text-center text-xs text-gray-500 mb-6 max-w-2xl mx-auto">Soutenez votre producteur ou coopérative favorite. Sécurisé par authentification OTP téléphonique pour garantir l'équité.</p>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <!-- Compteur National -->
+                <div class="bg-gray-50 border border-gray-200 p-4 rounded-lg text-center shadow-inner">
+                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Compteur National Global</span>
+                    <div class="text-3xl font-black text-green-600 font-mono" id="national-counter">342,159</div>
+                    <span class="text-[10px] text-gray-400 font-medium block mt-1">Objectif National : 500,000 votes</span>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 mt-3">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 68%"></div>
+                    </div>
+                </div>
+                
+                <!-- Formulaire de Vote Interactif -->
+                <div class="lg:col-span-2 bg-white border border-orange-100 p-4 rounded-lg shadow-sm">
+                    <form id="voteForm" onsubmit="handleVote(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-bold uppercase text-gray-600 mb-1">Sélectionner un Candidat</label>
+                                <select required class="w-full bg-white border border-gray-300 text-xs px-3 py-2 rounded shadow-sm focus:border-orange-500 outline-none">
+                                    <option value="">-- Choisir une coopérative/exposant --</option>
+                                    <option value="1">Coopérative COOP-CA Élite (Cacao)</option>
+                                    <option value="2">Société Africaine de Transformation (SAT)</option>
+                                    <option value="3">Femmes Battantes de Bouaké (Anacarde)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold uppercase text-gray-600 mb-1">Numéro de Téléphone (Vérification OTP)</label>
+                                <div class="flex">
+                                    <span class="inline-flex items-center px-3 rounded-l border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-xs font-bold">+225</span>
+                                    <input type="tel" pattern="[0-9]{10}" required placeholder="07XXXXXXXX" class="w-full bg-white border border-gray-300 text-xs px-3 py-2 rounded-r shadow-sm focus:border-orange-500 outline-none">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs uppercase px-5 py-2 rounded shadow-md transition-colors">
+                                Valider mon vote par SMS
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
         <!-- ==================== SECTION : NOS SPONSORS (STATIQUE) ==================== -->
 <section class="mt-12 bg-white rounded-sm shadow-sm border border-gray-100 py-8">
     <h2 class="text-center text-2xl font-extrabold uppercase tracking-wide text-orange-600 mb-6 font-serif">
